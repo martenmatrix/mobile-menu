@@ -49,9 +49,16 @@
 .mobile-menu .menu-button.not-main {
     pointer-events: none;
     transform: scale(0);
+
+    transition: transform 200ms ease-out;
 }
 
 .mobile-menu .menu-button.not-main.active {
+    transition-delay: 200ms;
     pointer-events: auto;
     transform: scale(1) rotate(1080deg);
+}
+
+.mobile-menu .menu-button.not-main.selected {
+
 }
