@@ -10,11 +10,27 @@
 </head>
 <body>
     <div class="mobile-menu">
-        <img data-redirect="#" class="menu-button not-main" src="./icons/arrow-redo-outline.svg">
-        <img data-redirect="#" class="menu-button not-main" src="./icons/cash-outline.svg">
-        <img class="menu-button main" src="./icons/add-outline.svg">
-        <img data-redirect="#" class="menu-button not-main" src="./icons/crop-outline.svg">
-        <img data-redirect="#" class="menu-button not-main" src="./icons/earth-outline.svg">
+        <div data-redirect="#" class="menu-button not-main">
+            <img src="./icons/arrow-redo-outline.svg">
+            <!--add selected class to the below div, if this is the startup page-->
+            <div class="circle selected"></div>
+        </div>
+        <div data-redirect="#" class="menu-button not-main">
+            <img src="./icons/cash-outline.svg">
+            <div class="circle"></div>
+        </div>
+        <div class="menu-button main">
+            <img src="./icons/add-outline.svg">
+            <div class="circle"></div>
+        </div>
+        <div data-redirect="#" class="menu-button not-main">
+            <img src="./icons/crop-outline.svg">
+            <div class="circle"></div>
+        </div>
+        <div data-redirect="#" class="menu-button not-main">
+            <img src="./icons/earth-outline.svg">
+            <div class="circle"></div>
+        </div>
     </div>
 </body>
 </html>

@@ -24,7 +24,7 @@
     max-width: 50rem;
 }
 
-.mobile-menu .menu-button {
+.mobile-menu .menu-button img {
     width:2rem;
     height:2rem;
 
@@ -36,29 +36,48 @@
     user-select: none;
 }
 
-.mobile-menu .menu-button.main {
-    transform: scale(1.5);
+.mobile-menu .menu-button {
+    display: flex;
+    position: relative;
+}
 
+.mobile-menu .menu-button.main img {
+    transform: scale(1.5);
     transition: transform 500ms ease-out;
 }
 
-.mobile-menu .menu-button.main.active {
+.mobile-menu .menu-button.main.active img {
     transform: scale(1.5) rotate(540deg);
 }
 
-.mobile-menu .menu-button.not-main {
+.mobile-menu .menu-button.not-main img {
     pointer-events: none;
     transform: scale(0);
 
     transition: transform 200ms ease-out;
 }
 
-.mobile-menu .menu-button.not-main.active {
+.mobile-menu .menu-button.not-main.active img {
     transition-delay: 200ms;
     pointer-events: auto;
     transform: scale(1) rotate(1080deg);
 }
 
-.mobile-menu .menu-button.not-main.selected {
+.mobile-menu .circle {
+    position: absolute;
+    bottom: 11px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50rem;
+
+    transition: background-color 250ms;
+}
+
+.mobile-menu .menu-button.active .circle.selected {
+    background-color: #26abff;
 }
