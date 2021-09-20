@@ -10,8 +10,13 @@ export default function initMenu() {
     });
 
     menuButtons.forEach((button) => button.addEventListener('click', (e) => {
-        menuButtons.forEach((menuButton) => menuButton.childNodes[3].classList.remove('selected'));
-        e.currentTarget.childNodes[3].classList.add('selected');
+        menuButtons.forEach((menuButton) => {
+            const circleDIV = menuButton.querySelector('.circle');
+            circleDIV.classList.remove('selected');
+        });
+
+        const currentTargetCircleDIV = e.currentTarget.querySelector('.circle');
+        currentTargetCircleDIV.classList.add('selected');
 
         // redirect
         window.location.href = e.currentTarget.dataset.redirect;
